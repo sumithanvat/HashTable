@@ -3,6 +3,7 @@ package com.bridgelabz;
 import java.util.LinkedList;
 
 public class WordFrequencyCounter {
+
     private final LinkedList<MyMapNode>[] myBucketArray;
     private static final int NUM_BUCKETS = 10;
 
@@ -22,6 +23,9 @@ public class WordFrequencyCounter {
 
     // Method to add a word to the hash table or increment its frequency if it already exists
     public void addWord(String word) {
+        if (word.equals("avoidable")) {
+            return;
+        }
         int bucketIndex = getBucketIndex(word);
         LinkedList<MyMapNode> myList = myBucketArray[bucketIndex];
         MyMapNode myNode = null;

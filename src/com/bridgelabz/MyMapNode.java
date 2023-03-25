@@ -23,4 +23,3 @@ public class MyMapNode {
         this.value = value;
     }
 }
-
